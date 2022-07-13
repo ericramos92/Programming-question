@@ -2,32 +2,32 @@
                         Brute Force
                     Time O(N^3) Space O(1)
 */
-// const threesum=(array)=>{
-//     let results = [];
-//     array.sort((a,b)=>{  //O(N log(N))
-//         return a-b
-//     })
-//     for(let i = 0;i<array.length;i++){  //O(N)
-//         if(i > 0 && array[i] == array[i-1]){//checks for duplicates at middle
-//             continue;
-//         }
-//         for(let j = i+1;j<array.length;j++){//O(N)
-//             if(j > i+1 && array[j] == array[j-1]){//checks for duplicates at start
-//                 continue;
-//             }
-//             for(let k = j+1;k<array.length;k++){//O(N)
-//                 if(k > j+1 && array[k] == array[k-1]){ //checks for duplicates at end
-//                     continue;
-//                 }
-//                 if(array[i]+array[j]+array[k] === 0){
-//                     results.push([array[i],array[j],array[k]])
+const threesum=(array)=>{
+    let results = [];
+    array.sort((a,b)=>{  //O(N log(N))
+        return a-b
+    })
+    for(let i = 0;i<array.length;i++){  //O(N)
+        if(i > 0 && array[i] == array[i-1]){//checks for duplicates at middle
+            continue;
+        }
+        for(let j = i+1;j<array.length;j++){//O(N)
+            if(j > i+1 && array[j] == array[j-1]){//checks for duplicates at start
+                continue;
+            }
+            for(let k = j+1;k<array.length;k++){//O(N)
+                if(k > j+1 && array[k] == array[k-1]){ //checks for duplicates at end
+                    continue;
+                }
+                if(array[i]+array[j]+array[k] === 0){
+                    results.push([array[i],array[j],array[k]])
                     
-//                 }
-//             }
-//         }
-//     }
-//     return results;
-// }
+                }
+            }
+        }
+    }
+    return results;
+}
 
 
 /*
