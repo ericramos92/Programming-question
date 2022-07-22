@@ -12,7 +12,7 @@ const sumsmaller=(array,target)=>{
         let right= array.length -1;
         while(left < right){
             if(array[i]+array[left]+array[right] < target){
-                total += right - left;// it give you all  the combination since we now that all the items are less than the target so it gives you the number
+                total += right - left;// it give you all  the combination since we now that all the items are less than the target so it gives you the number. It shows that anything between left and right is valid. Its jus a short cut.
                 console.log(total);
                 left +=1;
             }
