@@ -1,7 +1,7 @@
 
 const sum=(array,target)=>{
     array.sort((a,b)=> a-b); //sort the array
-    let closestSum = Infinity;
+    let closestSum = array[0] + array[1]+ array[2];
     
     for(let i = 0;i<array.length;i++){
         let left = i+1;
